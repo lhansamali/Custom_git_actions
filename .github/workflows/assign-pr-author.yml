@@ -8,6 +8,9 @@ jobs:
   assign-author:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out action
+        uses: actions/checkout@v3
+
       - name: Assign PR author
         uses: ./.github/actions/assign-pr-author
         with:
